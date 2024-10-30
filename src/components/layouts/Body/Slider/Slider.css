@@ -1,0 +1,175 @@
+.swiper-slide1 {
+    background-image: url('../../../../asset/img/slider-01.jpg');
+}
+
+.swiper-slide2 {
+    background-image: url('../../../../asset/img/slider-02.jpg');
+}
+
+.swiper-slide3 {
+    background-image: url('../../../../asset/img/slider-03.jpg');
+}
+
+.swiper-slide-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 850px;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.swiper-slide-header::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.swiper-button-prev {
+    left: calc(50vw - 600px - 150px);
+    color: #fff;
+}
+
+.swiper-button-next {
+    right: calc(50vw - 600px - 150px);
+    color: #fff;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    color: #EEAA9C;
+}
+
+.swiper-content {
+    max-width: 1200px;
+    margin: auto;
+    color: #fff;
+    z-index: 1;
+}
+
+.swiper-content h2, .swiper-content h4 {
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1.6px;
+}
+
+.swiper-content h4 {
+    margin-top: 10px;
+}
+
+.swiper-content p {
+    max-width: 360px;
+    margin-top: 10px;
+    white-space: normal;
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.swiper-content p::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 37px;
+    background-color: #EEAA9C;
+    top: 0;
+    left: 0;
+}
+
+.swiper-content a {
+    background-color: #EEAA9C;
+    padding: 16px 40px;
+    margin-top: 40px;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border: 2px solid #EEAA9C;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    user-select: none;
+    transition: 250ms all ease-in-out;
+}
+
+.swiper-slide-active .fadeGel {
+    opacity: 0;
+    animation-name: fadeGel;
+    -webkit-animation-name: fadeGel;
+}
+
+.swiper-slide-active .fadeGelUp {
+    opacity: 0;
+    animation-name: fadeGelUp;
+    -webkit-animation-name: fadeGelUp;
+}
+
+.swiper-slide-active .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+}
+
+.animation-delay {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeGel {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 10px, 0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeGel {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 10px, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeGelUp {
+    from {
+        transform: translate3d(0, 10px, 0);
+
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeGelUp {
+    from {
+        transform: translate3d(0, 10px, 0);
+
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
